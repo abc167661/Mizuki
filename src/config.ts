@@ -19,12 +19,12 @@ import { LinkPreset } from "./types/config";
 // 移除i18n导入以避免循环依赖
 
 // 定义站点语言
-const SITE_LANG = "ja"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
-const SITE_TIMEZONE = 8; //设置你的网站时区 from -12 to 12 default in UTC+8
+const SITE_LANG = "zh_CN"; // 语言代码，例如：'en', 'zh_CN', 'ja' 等。
+const SITE_TIMEZONE = 8; //设置你的网站时区 范围从 -12 到 12，默认 UTC+8
 export const siteConfig: SiteConfig = {
-	title: "Mizuki",
-	subtitle: "One demo website",
-	siteURL: "https://mizuki.mysqil.com/", // 请替换为你的站点URL，以斜杠结尾
+	title: "水木",
+	subtitle: "一个示例网站",
+	siteURL: "https://blog1.xn--lzs769c.com/", // 请替换为你的站点URL，以斜杠结尾
 	siteStartDate: "2025-01-01", // 站点开始运行日期，用于站点统计组件计算运行天数
 
 	timeZone: SITE_TIMEZONE,
@@ -53,7 +53,7 @@ export const siteConfig: SiteConfig = {
 		// 显示模式："text-icon" 显示图标+文本，"logo" 仅显示Logo
 		mode: "logo",
 		// 顶栏标题文本
-		text: "MizukiUI",
+		text: "水木UI",
 		// 顶栏标题图标路径，默认使用 public/assets/home/home.png
 		icon: "assets/home/home.png",
 		// 网站Logo图片路径
@@ -67,12 +67,12 @@ export const siteConfig: SiteConfig = {
 	},
 
 	bangumi: {
-		userId: "your-bangumi-id", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
+		userId: "你的Bangumi用户ID", // 在此处设置你的Bangumi用户ID，可以设置为 "sai" 测试
 		fetchOnDev: false, // 是否在开发环境下获取 Bangumi 数据（默认 false），获取前先执行 pnpm build 构建 json 文件
 	},
 
 	bilibili: {
-		vmid: "your-bilibili-vmid", // 在此处设置你的Bilibili用户ID (vmid)，例如 "1129280784"
+		vmid: "你的哔哩哔哩用户ID", // 在此处设置你的Bilibili用户ID (vmid)，例如 "1129280784"
 		fetchOnDev: false, // 是否在开发环境下获取 Bilibili 数据（默认 false）
 		SESSDATA: "", // Bilibili SESSDATA（可选，用于获取观看进度，从浏览器cookie中获取）
 		coverMirror: "", // 封面图片镜像源（可选，如果需要使用镜像源，例如 "https://images.weserv.nl/?url="）
@@ -155,14 +155,14 @@ export const siteConfig: SiteConfig = {
 
 		homeText: {
 			enable: true, // 在主页显示自定义文本
-			title: "わたしの部屋", // 主页横幅主标题
+			title: "我的小屋", // 主页横幅主标题
 
 			subtitle: [
-				"特別なことはないけど、君がいると十分です",
-				"今でもあなたは私の光",
-				"君ってさ、知らないうちに私の毎日になってたよ",
-				"君と話すと、なんか毎日がちょっと楽しくなるんだ",
-				"今日はなんでもない日。でも、ちょっとだけいい日",
+				"虽然没有什么特别的，但只要有你在就足够了",
+				"直到现在你也是我的光",
+				"你知道吗，不知不觉中你已经成为了我的日常",
+				"和你聊天的话，总觉得每天都变得稍微开心了一点",
+				"今天是平平无奇的一天。但是，是稍微美好的一天",
 			],
 			typewriter: {
 				enable: true, // 启用副标题打字机效果
@@ -176,7 +176,7 @@ export const siteConfig: SiteConfig = {
 		credit: {
 			enable: false, // 显示横幅图片来源文本
 
-			text: "Describe", // 要显示的来源文本
+			text: "描述", // 要显示的来源文本
 			url: "", // （可选）原始艺术品或艺术家页面的 URL 链接
 		},
 
@@ -258,7 +258,7 @@ export const navBarConfig: NavBarConfig = {
 		LinkPreset.Archive,
 		// 支持自定义导航栏链接，支持多级菜单
 		{
-			name: "Links",
+			name: "链接",
 			url: "/links/",
 			icon: "material-symbols:link",
 			children: [
@@ -269,7 +269,7 @@ export const navBarConfig: NavBarConfig = {
 					icon: "fa7-brands:github",
 				},
 				{
-					name: "Bilibili",
+					name: "哔哩哔哩",
 					url: "https://space.bilibili.com/701864046",
 					external: true,
 					icon: "fa7-brands:bilibili",
@@ -283,27 +283,27 @@ export const navBarConfig: NavBarConfig = {
 			],
 		},
 		{
-			name: "My",
+			name: "我的",
 			url: "/content/",
 			icon: "material-symbols:person",
 			children: [
 				{
-					name: "Anime",
+					name: "番剧",
 					url: "/anime/",
 					icon: "material-symbols:movie",
 				},
 				{
-					name: "Diary",
+					name: "日记",
 					url: "/diary/",
 					icon: "material-symbols:book",
 				},
 				{
-					name: "Gallery",
+					name: "相册",
 					url: "/albums/",
 					icon: "material-symbols:photo-library",
 				},
 				{
-					name: "Devices",
+					name: "设备",
 					url: "devices/",
 					icon: "material-symbols:devices",
 					external: false,
@@ -311,39 +311,39 @@ export const navBarConfig: NavBarConfig = {
 			],
 		},
 		{
-			name: "About",
+			name: "关于",
 			url: "/content/",
 			icon: "material-symbols:info",
 			children: [
 				{
-					name: "About",
+					name: "关于我",
 					url: "/about/",
 					icon: "material-symbols:person",
 				},
 				{
-					name: "Friends",
+					name: "友链",
 					url: "/friends/",
 					icon: "material-symbols:group",
 				},
 			],
 		},
 		{
-			name: "Others",
+			name: "其他",
 			url: "#",
 			icon: "material-symbols:more-horiz",
 			children: [
 				{
-					name: "Projects",
+					name: "项目",
 					url: "/projects/",
 					icon: "material-symbols:work",
 				},
 				{
-					name: "Skills",
+					name: "技能",
 					url: "/skills/",
 					icon: "material-symbols:psychology",
 				},
 				{
-					name: "Timeline",
+					name: "时间线",
 					url: "/timeline/",
 					icon: "material-symbols:timeline",
 				},
@@ -354,15 +354,15 @@ export const navBarConfig: NavBarConfig = {
 
 export const profileConfig: ProfileConfig = {
 	avatar: "assets/images/avatar.webp", // 相对于 /src 目录。如果以 '/' 开头，则相对于 /public 目录
-	name: "まつざか ゆき",
-	bio: "世界は大きい、君は行かなければならない",
+	name: "松坂由纪",
+	bio: "世界很大，你必须去",
 	typewriter: {
 		enable: true, // 启用个人简介打字机效果
 		speed: 80, // 打字速度（毫秒）
 	},
 	links: [
 		{
-			name: "Bilibili",
+			name: "哔哩哔哩",
 			icon: "fa7-brands:bilibili",
 			url: "https://space.bilibili.com/701864046",
 		},
@@ -443,11 +443,11 @@ export const shareConfig: ShareConfig = {
 
 export const announcementConfig: AnnouncementConfig = {
 	title: "", // 公告标题，填空使用i18n字符串Key.announcement
-	content: "ブログへようこそ！これはサンプルの告知です", // 公告内容
+	content: "欢迎来到我的博客！这是一条示例公告", // 公告内容
 	closable: true, // 允许用户关闭公告
 	link: {
 		enable: true, // 启用链接
-		text: "Learn More", // 链接文本
+		text: "了解更多", // 链接文本
 		url: "/about/", // 链接 URL
 		external: false, // 内部链接
 	},
@@ -619,16 +619,16 @@ export const pioConfig: import("./types/config").PioConfig = {
 	mode: "draggable", // 默认为可拖拽模式
 	hiddenOnMobile: true, // 默认在移动设备上隐藏
 	dialog: {
-		welcome: "Welcome to Mizuki Website!", // 欢迎词
+		welcome: "欢迎来到水木的网站！", // 欢迎词
 		touch: [
-			"What are you doing?",
-			"Stop touching me!",
-			"HENTAI!",
-			"Don't bully me like that!",
+			"你在干什么呀？",
+			"别碰我啦！",
+			"变态！",
+			"不要这样欺负我嘛！",
 		], // 触摸提示
-		home: "Click here to go back to homepage!", // 首页提示
-		skin: ["Want to see my new outfit?", "The new outfit looks great~"], // 换装提示
-		close: "QWQ See you next time~", // 关闭提示
+		home: "点击这里返回首页哦！", // 首页提示
+		skin: ["想看看我的新衣服吗？", "新衣服是不是超好看~"], // 换装提示
+		close: "呜呜呜 下次再见啦~", // 关闭提示
 		link: "https://github.com/matsuzaka-yuki/Mizuki", // 关于链接
 	},
 };
