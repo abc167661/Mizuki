@@ -120,7 +120,6 @@ export const siteConfig: SiteConfig = {
 			], // 桌面横幅图片
 			mobile: [
 				"/assets/mobile-banner/2.webp",
-				"/assets/mobile-banner/4.webp",
 				"/assets/mobile-banner/5.webp",
 				"/assets/mobile-banner/6.webp",
 			], // 移动横幅图片
